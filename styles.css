@@ -1,0 +1,239 @@
+:root {
+  --max-width: 1200px;
+  --accent: #111;
+  --muted: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: var(--accent);
+  background: url("assets/background.png") center center / cover no-repeat fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  /* remove or reduce min-height */
+  min-height: 80vh;       /* or min-height: 80vh; */
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;    /* centers content vertically */
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 32px;
+  align-items: start;
+}
+
+.topbar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.brand img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+.brand .name {
+  line-height: 1;
+}
+.brand .name h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.brand .name p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+nav.navlinks {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 0.88rem;
+}
+nav.navlinks a {
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+/* Main left content */
+.left {
+  padding-top: 80px;
+}
+.eyebrow {
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.headline {
+  font-family: Anton, Impact, sans-serif;
+  font-size: clamp(48px, 10vw, 120px);
+  line-height: 0.9;
+  margin: 0 0 18px 0;
+  letter-spacing: -1px;
+  color: #000;
+}
+
+.subtitle {
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 700;
+  margin: 8px 0 40px;
+  color: var(--accent);
+}
+
+
+/* Right profile */
+.profile-wrap {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.profile {
+  width: 400px;
+  height: 500px;
+  max-width: 100%;
+  transform: translateY(0);
+  padding-left: 50px;
+}
+.profile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 980px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .profile-wrap {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+  .topbar {
+    margin-bottom: 12px;
+  }
+  nav.navlinks {
+    gap: 18px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .headline {
+    font-size: clamp(34px, 12vw, 56px);
+  }
+  .profile {
+    width: 220px;
+  }
+
+}
+
+/* === Skills Slider === */
+.skills-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Slider Container */
+.slider {
+  --width: 150px;
+  --height: 150px;
+  --quantity: 9;
+  position: relative;
+  width: 65%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  opacity: 0.9;
+}
+
+/* Slider List */
+.slider .list {
+  display: flex;
+  position: relative;
+  width: calc(var(--width) * var(--quantity));
+}
+
+/* Each Item (Logo Container) */
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  display: flex;               /* centers logo */
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.5s;
+  animation: autoRun 20s linear infinite; /* slower */
+  animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1) - 20s);
+
+}
+
+/* Logo Images */
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;         /* prevents stretching */
+  display: block;
+  
+}
+
+.skills {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+@keyframes autoRun{
+  from{
+    left: 100%;
+  }to {
+    left: calc(var(--width) * -1);
+  }
+
+}
+
+.slider:hover .item{
+  animation-play-state: paused!important;
+  filter: gray(1);
+}
+
+.slider .item:hover{
+  filter:grayscale(0);
+}

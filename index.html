@@ -1,17 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Hero</title>
+
+    <!-- Optional: fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    
   </head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url("assets/background.png") no-repeat center center fixed;
-      background-size: cover;
-    }
-  </style>
-  <body></body>
+  <!-- Hero Section -->
+  <body>
+    <section class="hero">
+      <div class="container">
+        <div class="topbar">
+          <div class="brand" aria-label="Brand">
+            <img src="assets/logo.png" alt="logo" />
+            <div class="name">
+              <h4>Darius John S. Garcia</h4>
+              <p>Web Developer / Software Engineer</p>
+            </div>
+          </div>
+          <nav class="navlinks" role="navigation" aria-label="Main navigation">
+            <a href="#resume">Resume / CV</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+
+  
+        <div class="left">
+          <h1 class="headline">PORTFOLIO<br />WEBSITE</h1>
+
+          <div class="subtitle">Always learning by doing.</div>
+        </div>
+        <div class="profile-wrap">
+          <figure class="profile" aria-hidden="true">
+            <img src="assets/hero.png" alt="Darius John S. Garcia" />
+          </figure>
+        </div>
+    </section>
+
+    <!---Skills section-->
+      <section class="skills">
+        <h1 class="section-title">My Skills and Technologies</h1>
+
+        <div class="skills-box">
+          <div
+            class="slider"
+            reverse="true"
+            style="--width: 150px; --height: 150px; --quantity: 12"
+          >
+            <div class="list">
+              <div class="item" style="--position: 1">
+                <img src="icons/html_logo.png" alt="html_logo" />
+              </div>
+              <div class="item" style="--position: 2">
+                <img src="icons/css_logo.png" alt="css_logo" />
+              </div>
+              <div class="item" style="--position: 3">
+                <img src="icons/js_logo.png" alt="js_logo" />
+              </div>
+              <div class="item" style="--position: 4">
+                <img src="icons/react_logo.png" alt="react_logo" />
+              </div>
+              <div class="item" style="--position: 5">
+                <img src="icons/firebase_logo.png" alt="firebase_logo" />
+              </div>
+              <div class="item" style="--position: 6">
+                <img src="icons/git_logo.png" alt="git_logo" />
+              </div>
+              <div class="item" style="--position: 7">
+                <img src="icons/python_logo.png" alt="python_logo" />
+              </div>
+              <div class="item" style="--position: 8">
+                <img src="icons/figma_logo.png" alt="figma_logo" />
+              </div>
+              <div class="item" style="--position: 9">
+                <img src="icons/java_logo.png" alt="java_logo" />
+              </div>
+              <div class="item" style="--position: 10">
+                <img src="icons/dart_logo.png" alt="dart_logo" />
+              </div>
+              <div class="item" style="--position: 11">
+                <img src="icons/flutter.png" alt="flutter_logo" />
+              </div>
+              <div class="item" style="--position: 12">
+                <img src="icons/firebase_logo.png" alt="firebase_logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
 </html>
