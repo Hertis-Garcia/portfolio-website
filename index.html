@@ -36,7 +36,7 @@
   </head>
   <!-- Hero Section -->
   <body>
-    <section class="hero">
+    <section class="hero" id ="home">
       <div class="container">
         <div class="topbar">
           <div class="brand" aria-label="Brand">
@@ -47,7 +47,7 @@
             </div>
           </div>
           <nav class="navlinks" role="navigation" aria-label="Main navigation">
-            <a href="#resume">Resume / CV</a>
+            <a href="assets/Garcia_Resume.pdf" target="_blank">Resume / CV</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -68,7 +68,7 @@
     </section>
 
     <!---Skills section-->
-      <section class="skills">
+      <section class="skills" id="skills">
         <h1 class="section-title">My Skills and Technologies</h1>
 
         <div class="skills-box">
@@ -118,5 +118,100 @@
           </div>
         </div>
       </section>
+
+
+ <section id="projects" class="projects-section">
+  <h1 class="section-title">My Projects</h1>
+
+  <div class="projects-slider">
+
+    <!-- LEFT BUTTON -->
+    <button class="proj-btn left-btn">&#10094;</button>
+
+    <div class="projects-wrapper">
+      <div class="projects-track">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card single">
+          <img src="icons/milo_logo.png" alt="milo">
+          <h3>Project Title 1</h3>
+          <p>Short description of your project goes here.</p>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card single">
+          <img src="icons/milo_logo.png" alt="">
+          <h3>Project Title 2</h3>
+          <p>Short description...</p>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card single">
+          <img src="icons/milo_logo.png" alt="">
+          <h3>Project Title 3</h3>
+          <p>Short description...</p>
+        </div>
+
+      
+      </div>
+    </div>
+
+    <!-- RIGHT BUTTON -->
+    <button class="proj-btn right-btn">&#10095;</button>
+
+  </div>
+</section>
+
+
+
+<script>
+const track = document.querySelector(".projects-track");
+const slides = document.querySelectorAll(".project-card.single");
+const prevBtn = document.querySelector(".left-btn");
+const nextBtn = document.querySelector(".right-btn");
+
+let index = 1;
+
+function updateClasses() {
+  slides.forEach(slide => {
+    slide.classList.remove("active", "prev", "next");
+  });
+
+  slides[index].classList.add("active");
+
+  const prevIndex = (index - 1 + slides.length) % slides.length;
+  const nextIndex = (index + 1) % slides.length;
+
+  slides[prevIndex].classList.add("prev");
+  slides[nextIndex].classList.add("next");
+}
+
+function updateSlider() {
+  const slideWidth = slides[index].offsetWidth + 40; // gap included
+  const moveX = -(slideWidth * index) + (track.parentElement.offsetWidth - slides[index].offsetWidth) / 2;
+  track.style.transform = `translateX(${moveX}px)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % slides.length;
+  updateClasses();
+  updateSlider();
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateClasses();
+  updateSlider();
+});
+
+window.addEventListener("resize", updateSlider);
+
+
+updateClasses();
+setTimeout(updateSlider, 50);
+</script>
+
+
+
   </body>
 </html>
