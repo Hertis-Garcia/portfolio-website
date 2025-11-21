@@ -240,10 +240,6 @@ nav.navlinks a {
 
 
 
-
-
-
-
 /* Projects Section */
 .projects-section {
   text-align: center;
@@ -336,3 +332,39 @@ nav.navlinks a {
 .proj-btn:hover {
   background: rgba(0,0,0,0.7);
 }
+
+/* ===== Contact Section ===== */
+.contact-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 30px;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--accent);
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.icon-card i {
+  font-size: 48px;    
+  margin-bottom: 10px;
+  color: var(--accent);
+  transition: 0.3s ease;
+}
+
+.icon-card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
