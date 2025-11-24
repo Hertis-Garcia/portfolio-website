@@ -11,6 +11,7 @@ html,
 body {
   scroll-behavior: smooth;
   height: 100%;
+
 }
 body {
   margin: 0;
@@ -20,6 +21,13 @@ body {
   background: url("assets/background.png") center center / cover no-repeat fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .hero {
@@ -158,6 +166,109 @@ nav.navlinks a {
     width: 220px;
   }
 
+}
+
+/* ===== Aboout section ===== */
+.about-container {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 36px;
+  align-items: start;
+  padding: 0 20px;
+}
+
+.about-left .section-title {
+  margin-top: 0;
+}
+
+.about-text {
+  line-height: 1.65;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.about-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+/* ===== Leadership carousel ===== */
+.leadership-carousel {
+  position: relative;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  overflow: visible;
+}
+
+.car-viewport {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.car-track {
+  display: flex;
+  gap: 0;
+  transition: transform .5s cubic-bezier(.2,.9,.3,1);
+  will-change: transform;
+}
+
+.car-slide {
+  min-width: 320px;            
+  max-width: 320px;
+  text-align: center;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.car-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.car-slide figcaption {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+
+.car-prev { left: 8px; }
+.car-next { right: 8px; }
+
+
+/* dots */
+.car-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.car-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.car-dot.active {
+  background: rgba(0,0,0,0.7);
+}
+
+/* small screens */
+@media (max-width: 980px) {
+  .about-container { grid-template-columns: 1fr; }
+  .car-slide { min-width: 260px; max-width: 260px; }
 }
 
 /* === Skills Slider === */
@@ -368,4 +479,7 @@ nav.navlinks a {
   opacity: 1;
   transform: scale(1.1);
 }
+
+
+
 

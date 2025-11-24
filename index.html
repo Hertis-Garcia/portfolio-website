@@ -1,240 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>D. Garcia - Portfolio Site</title>
 
-    <!-- Optional: fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Anton&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>D. Garcia - Portfolio Site</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Optional: fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Anton&display=swap"
+    rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
-  </head>
-  <!-- Hero Section -->
-  <body>
-    <section class="hero" id ="home">
-      <div class="container">
-        <div class="topbar">
-          <div class="brand" aria-label="Brand">
-            <img src="assets/logo.png" alt="logo" />
-            <div class="name">
-              <h4>Darius John S. Garcia</h4>
-              <p>Web Developer / Software Engineer</p>
-            </div>
-          </div>
-          <nav class="navlinks" role="navigation" aria-label="Main navigation">
-            <a href="assets/Garcia_Resume.pdf" target="_blank">Resume / CV</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
+  <link rel="stylesheet" href="styles.css" />
 
-  
-        <div class="left">
-          <h1 class="headline">PORTFOLIO<br />WEBSITE</h1>
 
-          <div class="subtitle">Always learning by doing.</div>
-        </div>
-        <div class="profile-wrap">
-          <figure class="profile" aria-hidden="true">
-            <img src="assets/hero.png" alt="Darius John S. Garcia" />
-          </figure>
-        </div>
-    </section>
+</head>
+<!-- Hero Section -->
 
-    <!---Skills section-->
-      <section class="skills" id="skills">
-        <h1 class="section-title">My Skills and Technologies</h1>
-
-        <div class="skills-box">
-          <div
-            class="slider"
-            reverse="true"
-            style="--width: 150px; --height: 150px; --quantity: 12"
-          >
-            <div class="list">
-              <div class="item" style="--position: 1">
-                <img src="icons/html_logo.png" alt="html_logo" />
-              </div>
-              <div class="item" style="--position: 2">
-                <img src="icons/css_logo.png" alt="css_logo" />
-              </div>
-              <div class="item" style="--position: 3">
-                <img src="icons/js_logo.png" alt="js_logo" />
-              </div>
-              <div class="item" style="--position: 4">
-                <img src="icons/react_logo.png" alt="react_logo" />
-              </div>
-              <div class="item" style="--position: 5">
-                <img src="icons/firebase_logo.png" alt="firebase_logo" />
-              </div>
-              <div class="item" style="--position: 6">
-                <img src="icons/git_logo.png" alt="git_logo" />
-              </div>
-              <div class="item" style="--position: 7">
-                <img src="icons/python_logo.png" alt="python_logo" />
-              </div>
-              <div class="item" style="--position: 8">
-                <img src="icons/figma_logo.png" alt="figma_logo" />
-              </div>
-              <div class="item" style="--position: 9">
-                <img src="icons/java_logo.png" alt="java_logo" />
-              </div>
-              <div class="item" style="--position: 10">
-                <img src="icons/dart_logo.png" alt="dart_logo" />
-              </div>
-              <div class="item" style="--position: 11">
-                <img src="icons/flutter.png" alt="flutter_logo" />
-              </div>
-              <div class="item" style="--position: 12">
-                <img src="icons/firebase_logo.png" alt="firebase_logo" />
-              </div>
-            </div>
+<body>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="topbar">
+        <div class="brand" aria-label="Brand">
+          <img src="assets/logo.png" alt="logo" />
+          <div class="name">
+            <h4>Darius John S. Garcia</h4>
+            <p>Web Developer / Software Engineer</p>
           </div>
         </div>
-      </section>
+        <nav class="navlinks" role="navigation" aria-label="Main navigation">
+          <a href="assets/Garcia_Resume.pdf" target="_blank">Resume / CV</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
 
 
- <section id="projects" class="projects-section">
-  <h1 class="section-title">My Projects</h1>
+      <div class="left">
+        <h1 class="headline">PORTFOLIO<br />WEBSITE</h1>
 
-  <div class="projects-slider">
+        <div class="subtitle">Always learning by doing.</div>
+      </div>
+      <div class="profile-wrap">
+        <figure class="profile" aria-hidden="true">
+          <img src="assets/hero.png" alt="Darius John S. Garcia" />
+        </figure>
+      </div>
+  </section>
 
-    <!-- LEFT BUTTON -->
-    <button class="proj-btn left-btn">&#10094;</button>
+  <!-- ABOUT SECTION (two-column with carousel) -->
+  <section class="about-section" id="about">
+    <div class="about-container">
 
-    <div class="projects-wrapper">
-      <div class="projects-track">
+      <!-- LEFT: overview -->
+      <div class="about-left fade-in">
+        <h1 class="section-title">About Me</h1>
+        <p class="about-text">
+          Hello! I'm Darius John S. Garcia — a passionate Web Developer and Software Engineer dedicated to crafting
+          seamless digital experiences.
+          With a strong foundation in both front-end and back-end technologies, I specialize in building responsive and
+          user-friendly websites and applications.
+          I thrive on solving complex problems and continuously learning new skills to stay ahead in the ever-evolving
+          tech landscape.
+          When I'm not coding, I enjoy collaborating with fellow developers, contributing to open-source projects, and
+          staying updated with the latest industry trends.
+          Let's connect and create something amazing together!
+        </p>
+        <ul class="about-facts">
+          <li><strong>Interested Roles:</strong> Web Developer / Software Engineer</li>
+          <li><strong>Soft Skills:</strong> Leadership Experiences, Communication, Decision Making, Work Ethic</li>
+        </ul>
+      </div>
 
-        <!-- PROJECT 1 -->
-        <div class="project-card single">
-          <img src="icons/milo_logo.png" alt="milo">
-          <h3>Project Title 1</h3>
-          <p>Short description of your project goes here.</p>
+      <aside class="about-right fade-in">
+        <div class="leadership-carousel" aria-label="Leadership photos carousel">
+
+
+          <div class="car-viewport">
+            <div class="car-track">
+              <figure class="car-slide">
+                <img src="assets/lead1.jpg" alt="Leadership 1" />
+                <figcaption>Team Lead — Hackathon 2023</figcaption>
+              </figure>
+
+              <figure class="car-slide">
+                <img src="assets/lead2.jpg" alt="Leadership 2" />
+                <figcaption>Project Lead — University Project</figcaption>
+              </figure>
+
+              <figure class="car-slide">
+                <img src="assets/lead3.jpg" alt="Leadership 3" />
+                <figcaption>Organization Officer — Tech Club</figcaption>
+              </figure>
+
+
+            </div>
+          </div>
+
+
+
+          <div class="car-dots" role="tablist" aria-label="Slide navigation"></div>
         </div>
+      </aside>
 
-        <!-- PROJECT 2 -->
-        <div class="project-card single">
-          <img src="icons/milo_logo.png" alt="">
-          <h3>Project Title 2</h3>
-          <p>Short description...</p>
+    </div>
+  </section>
+
+  <!---Skills section-->
+  <section class="skills" id="skills">
+    <h1 class="section-title">My Skills and Technologies</h1>
+
+    <div class="skills-box">
+      <div class="slider" reverse="true" style="--width: 150px; --height: 150px; --quantity: 12">
+        <div class="list">
+          <div class="item" style="--position: 1">
+            <img src="icons/html_logo.png" alt="html_logo" />
+          </div>
+          <div class="item" style="--position: 2">
+            <img src="icons/css_logo.png" alt="css_logo" />
+          </div>
+          <div class="item" style="--position: 3">
+            <img src="icons/js_logo.png" alt="js_logo" />
+          </div>
+          <div class="item" style="--position: 4">
+            <img src="icons/react_logo.png" alt="react_logo" />
+          </div>
+          <div class="item" style="--position: 5">
+            <img src="icons/firebase_logo.png" alt="firebase_logo" />
+          </div>
+          <div class="item" style="--position: 6">
+            <img src="icons/git_logo.png" alt="git_logo" />
+          </div>
+          <div class="item" style="--position: 7">
+            <img src="icons/python_logo.png" alt="python_logo" />
+          </div>
+          <div class="item" style="--position: 8">
+            <img src="icons/figma_logo.png" alt="figma_logo" />
+          </div>
+          <div class="item" style="--position: 9">
+            <img src="icons/java_logo.png" alt="java_logo" />
+          </div>
+          <div class="item" style="--position: 10">
+            <img src="icons/dart_logo.png" alt="dart_logo" />
+          </div>
+          <div class="item" style="--position: 11">
+            <img src="icons/flutter.png" alt="flutter_logo" />
+          </div>
+          <div class="item" style="--position: 12">
+            <img src="icons/firebase_logo.png" alt="firebase_logo" />
+          </div>
         </div>
-
-        <!-- PROJECT 3 -->
-        <div class="project-card single">
-          <img src="icons/milo_logo.png" alt="">
-          <h3>Project Title 3</h3>
-          <p>Short description...</p>
-        </div>
-
-      
       </div>
     </div>
-
-    <!-- RIGHT BUTTON -->
-    <button class="proj-btn right-btn">&#10095;</button>
-
-  </div>
-</section>
-
-<section id="contact" class="contact-section">
-  <h1 class="section-title">Connect With Me</h1>
-
-  <div class="contact-icons">
-
-    <a href="mailto:darius.forworkgarcia@gmail.com" class="icon-card">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/darius-john-garcia-8766b8369" target="_blank" rel="noopener noreferrer" class="icon-card">
-     <i class="fa-brands fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-
-    <a href="https://github.com/Hertis-Garcia" target="_blank"  rel="noopener noreferrer "class="icon-card">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </a>
-
-  </div>
-</section>
+  </section>
 
 
+  <section id="projects" class="projects-section">
+    <h1 class="section-title">My Projects</h1>
 
-<script>
-const track = document.querySelector(".projects-track");
-const slides = document.querySelectorAll(".project-card.single");
-const prevBtn = document.querySelector(".left-btn");
-const nextBtn = document.querySelector(".right-btn");
+    <div class="projects-slider">
 
-let index = 1;
+      <!-- LEFT BUTTON -->
+      <button class="proj-btn left-btn">&#10094;</button>
 
-function updateClasses() {
-  slides.forEach(slide => {
-    slide.classList.remove("active", "prev", "next");
-  });
+      <div class="projects-wrapper">
+        <div class="projects-track">
 
-  slides[index].classList.add("active");
+          <!-- PROJECT 1 -->
+          <div class="project-card single">
+            <img src="icons/milo_logo.png" alt="milo">
+            <h3>Project Title 1</h3>
+            <p>Short description of your project goes here.</p>
+          </div>
 
-  const prevIndex = (index - 1 + slides.length) % slides.length;
-  const nextIndex = (index + 1) % slides.length;
+          <!-- PROJECT 2 -->
+          <div class="project-card single">
+            <img src="icons/milo_logo.png" alt="">
+            <h3>Project Title 2</h3>
+            <p>Short description...</p>
+          </div>
 
-  slides[prevIndex].classList.add("prev");
-  slides[nextIndex].classList.add("next");
-}
-
-function updateSlider() {
-  const slideWidth = slides[index].offsetWidth + 40; // gap included
-  const moveX = -(slideWidth * index) + (track.parentElement.offsetWidth - slides[index].offsetWidth) / 2;
-  track.style.transform = `translateX(${moveX}px)`;
-}
-
-nextBtn.addEventListener("click", () => {
-  index = (index + 1) % slides.length;
-  updateClasses();
-  updateSlider();
-});
-
-prevBtn.addEventListener("click", () => {
-  index = (index - 1 + slides.length) % slides.length;
-  updateClasses();
-  updateSlider();
-});
-
-window.addEventListener("resize", updateSlider);
+          <!-- PROJECT 3 -->
+          <div class="project-card single">
+            <img src="icons/milo_logo.png" alt="">
+            <h3>Project Title 3</h3>
+            <p>Short description...</p>
+          </div>
 
 
-updateClasses();
-setTimeout(updateSlider, 50);
-</script>
+        </div>
+      </div>
+
+      <!-- RIGHT BUTTON -->
+      <button class="proj-btn right-btn">&#10095;</button>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h1 class="section-title">Connect With Me</h1>
+
+    <div class="contact-icons">
+
+      <a href="mailto:darius.forworkgarcia@gmail.com" class="icon-card">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/darius-john-garcia-8766b8369" target="_blank" rel="noopener noreferrer"
+        class="icon-card">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a href="https://github.com/Hertis-Garcia" target="_blank" rel="noopener noreferrer " class="icon-card">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+
+    </div>
+  </section>
 
 
 
-  </body>
+  <script>
+    const track = document.querySelector(".projects-track");
+    const slides = document.querySelectorAll(".project-card.single");
+    const prevBtn = document.querySelector(".left-btn");
+    const nextBtn = document.querySelector(".right-btn");
+
+    let index = 1;
+
+    function updateClasses() {
+      slides.forEach(slide => {
+        slide.classList.remove("active", "prev", "next");
+      });
+
+      slides[index].classList.add("active");
+
+      const prevIndex = (index - 1 + slides.length) % slides.length;
+      const nextIndex = (index + 1) % slides.length;
+
+      slides[prevIndex].classList.add("prev");
+      slides[nextIndex].classList.add("next");
+    }
+
+    function updateSlider() {
+      const slideWidth = slides[index].offsetWidth + 40; // gap included
+      const moveX = -(slideWidth * index) + (track.parentElement.offsetWidth - slides[index].offsetWidth) / 2;
+      track.style.transform = `translateX(${moveX}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % slides.length;
+      updateClasses();
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateClasses();
+      updateSlider();
+    });
+
+    window.addEventListener("resize", updateSlider);
+
+
+    updateClasses();
+    setTimeout(updateSlider, 50);
+
+
+
+    (function () {
+      const carousel = document.querySelector(".leadership-carousel");
+      if (!carousel) return;
+
+      const track = carousel.querySelector(".car-track");
+      const slides = Array.from(track.querySelectorAll(".car-slide"));
+      const dotsWrap = carousel.querySelector(".car-dots");
+
+      // build dots
+      slides.forEach((s, i) => {
+        const d = document.createElement("button");
+        d.className = "car-dot";
+        d.setAttribute("aria-label", `Go to slide ${i + 1}`);
+        d.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(d);
+      });
+      const dots = Array.from(dotsWrap.children);
+
+      let index = 0;
+      let autoPlayId = null;
+
+      // center the target slide in the viewport
+      function centerSlide(i) {
+        const viewport = carousel.querySelector(".car-viewport");
+        const viewportW = viewport.clientWidth;
+        const slide = slides[i];
+        // slide.offsetLeft gives position inside track
+        const offset = slide.offsetLeft - (viewportW - slide.offsetWidth) / 2;
+        track.style.transform = `translateX(${-offset}px)`;
+      }
+
+      function update() {
+        // guard for responsive changes
+        if (!slides[0]) return;
+        centerSlide(index);
+        dots.forEach(d => d.classList.remove("active"));
+        if (dots[index]) dots[index].classList.add("active");
+      }
+
+      function goTo(i) {
+        index = ((i % slides.length) + slides.length) % slides.length;
+        update();
+      }
+
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+
+      // autoplay
+      function startAuto() {
+        stopAuto();
+        autoPlayId = setInterval(next, 4000);
+      }
+      function stopAuto() {
+        if (autoPlayId) { clearInterval(autoPlayId); autoPlayId = null; }
+      }
+
+      // pause on hover
+      carousel.addEventListener("mouseenter", stopAuto);
+      carousel.addEventListener("mouseleave", startAuto);
+
+      // responsive: recalc when images load or window resizes
+      window.addEventListener("resize", update);
+      // wait for images to load to get correct offsets
+      const imgs = carousel.querySelectorAll("img");
+      let imgCount = imgs.length, loaded = 0;
+      if (imgCount === 0) { update(); startAuto(); }
+      imgs.forEach(img => {
+        if (img.complete) { loaded++; }
+        else img.addEventListener("load", () => { loaded++; if (loaded === imgCount) { update(); startAuto(); } });
+      });
+      // fallback if images already complete
+      if (loaded === imgCount) { update(); startAuto(); }
+
+      // initial
+      update();
+      startAuto();
+
+    })();
+
+
+
+  </script>
+
+
+
+</body>
+
 </html>
