@@ -243,7 +243,6 @@ section {
   height: 9px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.25);
-  cursor: pointer;
 }
 
 .car-dot.active {
@@ -399,7 +398,6 @@ section {
   opacity: 0.35;
   transform: scale(0.9);
   transition: all 0.45s ease;
-  cursor: pointer;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .project-card:hover {
@@ -551,8 +549,6 @@ section {
   font-size: 0.75rem;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(251, 189, 0, 0.15);
-  color: #fbbd00;
   font-weight: 600;
 }
 /* ================= PROJECT COLOR THEMES ================= */
@@ -570,6 +566,10 @@ section {
     rgba(251, 189, 0, 0.35),
     rgba(251, 189, 0, 0.05)
   );
+}
+.project-milo .project-tech span {
+  background: rgba(251, 189, 0, 0.15);
+  color: #fbbd00;
 }
 
 .project-milo .project-image:hover .overlay-btn {
@@ -625,6 +625,80 @@ section {
   color: #000;
 }
 
+/* ================= SENATOR CATALOG COLORS ================= */
+
+.project-senator h3,
+.project-senator .overlay-content h4 {
+  color: #0d47a1; /* deep civic blue */
+}
+
+.project-senator .project-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(13, 71, 161, 0.75),
+    rgba(13, 71, 161, 0.35),
+    rgba(13, 71, 161, 0.05)
+  );
+}
+.project-senator .project-tech span {
+  background: rgba(13, 71, 161, 0.15);
+  color: #0d47a1;
+}
+.project-senator .project-image:hover .overlay-btn {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.project-senator p {
+  color: #000;
+}
+
+.project-senator .overlay-content p {
+  color: #0d47a1;
+}
+
+.project-senator .overlay-btn {
+  background: #ffffff;
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+.project-senator .overlay-btn:hover {
+  background: #0d47a1;
+  color: #ffffff;
+}
+
+/* Senator Catalog layout */
+.project-senator .project-body {
+  padding-top: 12px;
+}
+
+.project-senator h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.project-senator .project-desc {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 14px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-senator .project-features {
+  max-width: 520px;
+  margin: 0 auto;
+  padding-left: 18px;
+  text-align: left;
+}
+
+.project-senator .project-features li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #000;
+}
 /* ================= CONTACT ================= */
 
 .contact-section {
