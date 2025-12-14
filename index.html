@@ -122,40 +122,50 @@
       <div class="skills-block left">
         <h3>Programming Languages</h3>
         <div class="skills-icons">
-          <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
-          <img src="https://api.iconify.design/logos-java.svg" alt="Java">
-          <img src="https://cdn.simpleicons.org/python" alt="Python">
-          <img src="https://cdn.simpleicons.org/dart" alt="Dart">
+          <img src="https://cdn.simpleicons.org/javascript" data-name="JavaScript" alt="JavaScript">
+          <img src="https://api.iconify.design/logos-java.svg" data-name="Java" alt="Java">
+          <img src="https://cdn.simpleicons.org/python" data-name="Python" alt="Python">
+          <img src="https://cdn.simpleicons.org/dart" data-name="Dart" alt="Dart">
+          <img src="https://cdn.simpleicons.org/typescript" data-name="TypeScript" alt="TypeScript">
+          <img src="https://cdn.simpleicons.org/c++" data-name="SQL / MySQL" alt="SQL">
+
         </div>
+
+        <div class="skill-label"></div>
       </div>
 
       <!-- Frameworks -->
       <div class="skills-block right">
         <h3>Frameworks & Technologies</h3>
         <div class="skills-icons">
-          <img src="https://cdn.simpleicons.org/react" alt="React">
-          <img src="https://cdn.simpleicons.org/flutter" alt="Flutter">
-          <img src="https://cdn.simpleicons.org/firebase" alt="Firebase">
+          <img src="https://cdn.simpleicons.org/react" data-name="React">
+          <img src="https://cdn.simpleicons.org/flutter" data-name="Flutter">
+          <img src="https://cdn.simpleicons.org/firebase" data-name="Firebase">
+          <img src="https://cdn.simpleicons.org/bootstrap" data-name="Bootstrap">
+          <img src="https://cdn.simpleicons.org/mysql" data-name="MySQL" alt="MySQL">
+          <img src="https://cdn.simpleicons.org/mongodb" data-name="C++" alt="C++">
         </div>
+        <div class="skill-label"></div>
       </div>
 
       <!-- Tools Slider -->
       <div class="skills-block centered">
-        <h3>Tools & Software</h3>
+        <h3>Other Tools & Software</h3>
         <div class="tools-slider">
           <div class="tools-track">
-            <div class="tools-item"><img src="https://cdn.simpleicons.org/figma"></div>
-            <div class="tools-item"><img src="https://cdn.simpleicons.org/git"></div>
-            <div class="tools-item"><img src="https://cdn.simpleicons.org/github"></div>
-            <div class="tools-item"><img src="https://api.iconify.design/logos-android-icon.svg"></div>
+            <div class="tools-item"><img src="https://cdn.simpleicons.org/figma" data-name="Figma"></div>
+            <div class="tools-item"><img src="https://cdn.simpleicons.org/git" data-name="Git"></div>
+            <div class="tools-item"><img src="https://cdn.simpleicons.org/github" data-name="Github"></div>
+            <div class="tools-item"><img src="https://api.iconify.design/logos-android-icon.svg" data-name="Android Studio"></div>
 
             <!-- duplicate for seamless loop -->
-            <div class="tools-item"><img src="https://cdn.simpleicons.org/figma"></div>
-            <div class="tools-item"><img src="https://cdn.simpleicons.org/git"></div>
-            <div class="tools-item"><img src="https://cdn.simpleicons.org/github"></div>
-            <div class="tools-item"><img src="https://api.iconify.design/logos-android-icon.svg"></div>
+            <div class="tools-item"><img src="https://cdn.simpleicons.org/figma" data-name="Figma"></div>
+            <div class="tools-item"><img src="https://cdn.simpleicons.org/git" data-name="Git"></div>
+            <div class="tools-item"><img src="https://cdn.simpleicons.org/github" data-name="Github"></div>
+            <div class="tools-item"><img src="https://api.iconify.design/logos-android-icon.svg" data-name="Android Studio"></div>
           </div>
         </div>
+        <div class="skill-label"></div>
       </div>
 
     </div>
@@ -201,9 +211,22 @@
     <h1 class="section-title">Connect With Me</h1>
 
     <div class="contact-icons">
-      <a href="mailto:darius.forworkgarcia@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/Hertis-Garcia" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+      <a href="mailto:darius.forworkgarcia@gmail.com" class="contact-link" data-label="Email">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="contact-tooltip">Email</span>
+      </a>
+
+      <a href="https://linkedin.com" target="_blank" class="contact-link" data-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+        <span class="contact-tooltip">LinkedIn</span>
+      </a>
+
+      <a href="https://github.com/Hertis-Garcia" target="_blank" class="contact-link" data-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+        <span class="contact-tooltip">GitHub</span>
+      </a>
+
     </div>
   </section>
 
@@ -349,6 +372,30 @@
         update();
         startAuto();
       }
+    })();
+
+    /* ================= SKILLS LABELS ================= */
+
+    (function() {
+      const skillBlocks = document.querySelectorAll(".skills-block");
+
+      skillBlocks.forEach(block => {
+        const label = block.querySelector(".skill-label");
+        const icons = block.querySelectorAll("[data-name]");
+
+        if (!label || icons.length === 0) return;
+
+        icons.forEach(icon => {
+          icon.addEventListener("mouseenter", () => {
+            label.textContent = icon.dataset.name;
+            label.classList.add("active");
+          });
+
+          icon.addEventListener("mouseleave", () => {
+            label.classList.remove("active");
+          });
+        });
+      });
     })();
   </script>
 </body>

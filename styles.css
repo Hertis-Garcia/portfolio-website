@@ -43,7 +43,7 @@ body {
 
 section {
   width: 100%;
-  padding: 120px 24px;
+  padding: 60px 10px;
 }
 
 .section-title {
@@ -58,6 +58,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .hero-container {
@@ -68,6 +69,7 @@ section {
   grid-template-columns: 1fr 420px;
   gap: 48px;
   align-items: center;
+  padding: 60px 24px;
 }
 
 .hero-topbar {
@@ -250,7 +252,7 @@ section {
 /* ================= SKILLS ================= */
 
 .skills-section {
-  padding-top: 80px;
+  padding-top: 50px;
 }
 
 .skills-grid {
@@ -258,7 +260,8 @@ section {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  column-gap: 80px;
+  row-gap: 50px;
 }
 
 .skills-block {
@@ -267,7 +270,7 @@ section {
 
 .skills-block.centered {
   grid-column: 1 / -1;
-  margin-top: 40px;
+  margin-top: -20px;
 }
 
 .skills-block h3 {
@@ -299,7 +302,7 @@ section {
 /* ================= TOOLS – TRUE SLIDING CAROUSEL ================= */
 
 .tools-slider {
-  width: 120px;
+  width: 250px;
   height: 120px;
   overflow: hidden;
   margin: 0 auto;
@@ -340,6 +343,26 @@ section {
 /* Pause on hover EXACTLY where it is */
 .tools-slider:hover .tools-track {
   animation-play-state: paused;
+}
+
+/* Skill label (shared per category) */
+.skill-label {
+  padding-top: 20px;
+  margin-top: 16px;
+  min-height: 24px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  text-align: center;
+}
+
+/* visible state */
+.skill-label.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ================= PROJECTS ================= */
@@ -444,6 +467,33 @@ section {
 
 .contact-icons a:hover {
   transform: scale(1.15);
+}
+
+/* Contact icon wrapper */
+.contact-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Tooltip text */
+.contact-tooltip {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+/* Show on hover */
+.contact-link:hover .contact-tooltip {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ================= RESPONSIVE ================= */
