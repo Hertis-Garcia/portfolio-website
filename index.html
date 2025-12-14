@@ -88,8 +88,8 @@
             <div class="car-track">
 
               <figure class="car-slide">
-                <img src="assets/lead1.jpg" alt="Leadership 1">
-                <figcaption>Team Lead — Hackathon 2023</figcaption>
+                <img src="assets/about_slide1.jpeg" alt="Leadership 1">
+                <figcaption>Project Head - DLSU-D Chasing Victory</figcaption>
               </figure>
 
               <figure class="car-slide">
@@ -173,7 +173,7 @@
 
   <!-- ================= PROJECTS ================= -->
   <section class="projects-section" id="projects">
-    <h1 class="section-title">My Projects</h1>
+    <h1 class="section-title"> Projects</h1>
 
     <div class="projects-carousel">
       <button class="projects-btn prev">&#10094;</button>
@@ -182,16 +182,68 @@
         <div class="projects-track">
 
           <article class="project-card">
-            <img src="assets/milo_logo.png" alt="">
+            <div class="project-image">
+              <img src="assets/milo_logo.png" alt="MILO">
+
+              <div class="project-overlay">
+                <div class="overlay-content">
+
+
+                  <a href="https://play.google.com/store/apps/details?id=com.gforce.milo_app" target="_blank" class="overlay-btn">
+                    View on Play Store
+                  </a>
+                </div>
+              </div>
+            </div>
             <h3>Project Title 1</h3>
             <p>Short description...</p>
           </article>
 
-          <article class="project-card active">
-            <img src="assets/milo_logo.png" alt="MILO">
-            <h3>M.I.L.O.</h3>
-            <p>AI-powered budgeting mobile application.</p>
+          <article class="project-card project-milo active">
+
+            <div class="project-image">
+              <img src="assets/milo_logo.png" alt="M.I.L.O. App Logo" />
+
+              <div class="project-overlay">
+                <div class="overlay-content">
+
+                  <a href="https://play.google.com/store/apps/details?id=com.gforce.milo_app" class="overlay-btn" target="_blank" rel="noopener noreferrer">View on Play Store</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <small class="project-hint">Hover to view app details</small>
+              <h3>M.I.L.O. </h3>
+              <h3>Monetary Intelligence & Ledger Organizer</h3>
+
+              <div class="project-tech">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>OCR</span>
+                <span>AI Chatbot</span>
+              </div>
+
+
+
+              <p class="project-desc">
+                Android-based financial management app built for Filipino users to
+                simplify budgeting, expense tracking, and financial learning using AI
+                and automation.
+              </p>
+
+              <ul class="project-features">
+                <li>AI-powered chatbot for financial guidance</li>
+                <li>OCR receipt scanning for automated expense logging</li>
+                <li>Educational page with guided learning videos</li>
+                <li>Monthly financial summary reports</li>
+              </ul>
+            </div>
+
           </article>
+
+
 
           <article class="project-card">
             <img src="assets/milo_logo.png" alt="">
@@ -397,6 +449,23 @@
         });
       });
     })();
+
+
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+
+    document.documentElement.style.scrollBehavior = "auto";
+
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+
+      // Re-enable smooth scrolling AFTER reset
+      requestAnimationFrame(() => {
+        document.documentElement.style.scrollBehavior = "smooth";
+      });
+    });
   </script>
 </body>
 
