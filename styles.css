@@ -881,6 +881,13 @@ section {
     hyphens: auto;
   }
 
+  .about-facts {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
   .about-right {
     display: flex;
     justify-content: center;
@@ -948,6 +955,11 @@ section {
     min-width: 260px;
   }
   .about-text {
+    max-width: 32ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-facts {
     max-width: 32ch;
     margin-left: auto;
     margin-right: auto;
