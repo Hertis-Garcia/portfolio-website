@@ -808,7 +808,8 @@ section {
   margin-right: auto;
 }
 /* ================= RESPONSIVENESS Section ================= */
-/* ================= RESPONSIVENESS ================= */
+
+/* ================= RESPONSIVENESS Section ================= */
 
 /* ---------- Large tablets & small laptops ---------- */
 @media (max-width: 1200px) {
@@ -821,7 +822,6 @@ section {
 
 /* ---------- Tablets & smaller ---------- */
 @media (max-width: 900px) {
-  /* GLOBAL */
   section {
     padding: 48px 0;
   }
@@ -830,10 +830,10 @@ section {
     font-size: 1.9rem;
   }
 
-  /* HERO */
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 48px 16px;
   }
 
   .hero-topbar {
@@ -856,47 +856,20 @@ section {
     display: none;
   }
 
-  /* SKILLS */
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .about-section {
+    padding: 72px 0;
   }
 
-  /* PROJECTS */
-  .projects-btn.prev,
-  .projects-btn.next {
-    display: none;
-  }
-
-  .projects-track {
-    flex-direction: column;
-    transform: none !important;
-  }
-
-  .project-card {
-    min-width: 100%;
-    opacity: 1;
-    transform: none;
-  }
-
-  .projects-viewport {
-    overflow: visible;
-  }
-
-  .project-image img {
-    height: 280px;
-  }
-
-  /* ABOUT */
   .about-container {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0 16px;
   }
 
   .about-left {
     text-align: center;
     max-width: 640px;
     margin: 0 auto;
-    padding: 0 16px;
   }
 
   .about-left .section-title {
@@ -916,6 +889,39 @@ section {
   .leadership-carousel {
     max-width: 420px;
     width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .projects-btn.prev,
+  .projects-btn.next {
+    display: none;
+  }
+
+  .projects-carousel {
+    padding: 0 16px;
+  }
+
+  .projects-track {
+    flex-direction: column;
+    transform: none !important;
+  }
+
+  .project-card {
+    min-width: 100%;
+    opacity: 1;
+    transform: none;
+  }
+
+  .projects-viewport {
+    overflow: visible;
+  }
+
+  .project-image img {
+    height: 280px;
   }
 }
 
