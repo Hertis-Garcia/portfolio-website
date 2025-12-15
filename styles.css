@@ -821,7 +821,21 @@ section {
 /* ---------- Tablets & smaller ---------- */
 @media (max-width: 900px) {
   section {
-    padding: 48px 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-container,
+  .about-container,
+  .skills-grid,
+  .projects-carousel {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .section-title {
