@@ -820,9 +820,6 @@ section {
 
 /* ---------- Tablets & smaller ---------- */
 @media (max-width: 900px) {
-  body {
-    background-attachment: scroll;
-  }
   section {
     padding-top: 48px;
     padding-bottom: 48px;
