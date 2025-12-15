@@ -4,8 +4,6 @@
   --muted: #444;
 }
 
-/* ================= RESET ================= */
-
 * {
   box-sizing: border-box;
 }
@@ -107,8 +105,8 @@ section {
   text-decoration: none;
   font-weight: 600;
   color: var(--accent);
-  display: inline-block; /* REQUIRED */
-  transition: transform 0.25s ease; /* RECOMMENDED */
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
 .hero-nav a:hover {
   transform: scale(1.1);
@@ -152,7 +150,6 @@ section {
   align-items: start;
 }
 
-/* Left side */
 .about-left {
   text-align: left;
 }
@@ -182,7 +179,6 @@ section {
   color: var(--accent);
 }
 
-/* Right side */
 .about-right {
   position: relative;
 }
@@ -231,7 +227,6 @@ section {
   color: var(--muted);
 }
 
-/* Carousel dots */
 .car-dots {
   display: flex;
   justify-content: center;
@@ -278,7 +273,6 @@ section {
   font-size: 1.3rem;
 }
 
-/* Icon groups */
 .skills-icons {
   display: flex;
   justify-content: center;
@@ -309,14 +303,12 @@ section {
   position: relative;
 }
 
-/* Track moves, viewport stays */
 .tools-track {
   display: flex;
-  width: calc(120px * 8); /* duplicated items */
+  width: calc(120px * 8);
   animation: toolsSlide 16s linear infinite;
 }
 
-/* Each item exactly fills the viewport */
 .tools-item {
   flex: 0 0 120px;
   display: flex;
@@ -340,12 +332,10 @@ section {
   }
 }
 
-/* Pause on hover EXACTLY where it is */
 .tools-slider:hover .tools-track {
   animation-play-state: paused;
 }
 
-/* Skill label (shared per category) */
 .skill-label {
   padding-top: 20px;
   margin-top: 16px;
@@ -359,7 +349,6 @@ section {
   text-align: center;
 }
 
-/* visible state */
 .skill-label.active {
   opacity: 1;
   transform: translateY(0);
@@ -412,7 +401,6 @@ section {
 }
 
 .project-card > img {
-  /* ONLY applies if image is NOT wrapped */
   width: 100%;
   height: 320px;
   object-fit: cover;
@@ -420,14 +408,12 @@ section {
   margin-bottom: 16px;
 }
 
-/* Project image wrapper */
 .project-image {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
 }
 
-/* Base image */
 .project-image img {
   width: 100%;
   height: 400px;
@@ -436,7 +422,6 @@ section {
   transition: transform 0.4s ease;
 }
 
-/* Overlay layer */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -448,7 +433,6 @@ section {
   transition: opacity 0.4s ease;
 }
 
-/* Overlay content */
 .overlay-content {
   text-align: center;
   color: #fff;
@@ -468,7 +452,6 @@ section {
   opacity: 0.9;
 }
 
-/* Button */
 .overlay-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -486,7 +469,6 @@ section {
   transform: translateY(-2px);
 }
 
-/* Hover effects */
 .project-image:hover img {
   transform: scale(1.08);
 }
@@ -554,7 +536,7 @@ section {
 }
 /* ================= PROJECT COLOR THEMES ================= */
 
-/* MILO COLORS */
+/* ================= PROJECT MILO COLOR ================= */
 .project-milo h3,
 .project-milo .overlay-content h4 {
   color: #fbbd00;
@@ -595,7 +577,6 @@ section {
   background: #fbbd00;
 }
 
-/* Milo layout */
 .project-milo .project-body {
   padding-top: 12px;
 }
@@ -626,11 +607,11 @@ section {
   color: #000;
 }
 
-/* ================= SENATOR CATALOG COLORS ================= */
+/* ================= PROJECT SENATOR COLORS ================= */
 
 .project-senator h3,
 .project-senator .overlay-content h4 {
-  color: #0d47a1; /* deep civic blue */
+  color: #0d47a1;
 }
 
 .project-senator .project-overlay {
@@ -669,7 +650,6 @@ section {
   color: #ffffff;
 }
 
-/* Senator Catalog layout */
 .project-senator .project-body {
   padding-top: 12px;
 }
@@ -701,7 +681,7 @@ section {
   color: #000;
 }
 
-/* ================= RSVP PROJECT COLORS ================= */
+/* ================= PROJECT RSVP COLORS ================= */
 
 .project-rsvp h3,
 .project-rsvp .overlay-content h4 {
@@ -776,7 +756,6 @@ section {
   font-size: 0.9rem;
   color: #000;
 }
-/* ================= CONTACT ================= */
 
 .contact-section {
   padding-top: 60px;
@@ -798,7 +777,6 @@ section {
   transform: scale(1.15);
 }
 
-/* Contact icon wrapper */
 .contact-link {
   position: relative;
   display: flex;
@@ -807,7 +785,6 @@ section {
   text-decoration: none;
 }
 
-/* Tooltip text */
 .contact-tooltip {
   margin-top: 8px;
   font-size: 0.85rem;
@@ -819,18 +796,73 @@ section {
   pointer-events: none;
 }
 
-/* Show on hover */
 .contact-link:hover .contact-tooltip {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVENESS Section ================= */
+
+@media (max-width: 1200px) {
+  .hero-container,
+  .about-container {
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+  }
+}
 
 @media (max-width: 900px) {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-btn.prev,
+  .projects-btn.next {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 48px 16px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-icons {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-topbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-brand img {
+    width: 88px;
+    height: auto;
   }
 
   .hero-nav {
@@ -839,11 +871,116 @@ section {
 
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
   }
 
   .projects-btn.prev,
   .projects-btn.next {
     display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-btn.prev,
+  .projects-btn.next {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 48px 16px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-icons {
+    gap: 36px;
+  }
+}
+/* ---------- Smaller screens ---------- */
+@media (max-width: 900px) {
+  section {
+    padding: 48px 16px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .projects-track {
+    flex-direction: column;
+    transform: none !important;
+  }
+
+  .project-card {
+    min-width: 100%;
+    opacity: 1;
+    transform: none;
+  }
+
+  .projects-viewport {
+    overflow: visible;
+  }
+
+  .project-image img {
+    height: 280px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-left {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .about-left .section-title {
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .leadership-carousel {
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+.section-title {
+  font-size: 1.9rem;
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 600px) {
+  .contact-icons {
+    gap: 36px;
+  }
+  .leadership-carousel {
+    padding: 10px;
+  }
+
+  .car-slide img {
+    height: 180px;
+  }
+
+  .car-slide {
+    min-width: 260px;
   }
 }
