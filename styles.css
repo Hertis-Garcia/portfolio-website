@@ -831,7 +831,7 @@ section {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 48px 16px;
+    padding: 48px 0;
   }
 
   .hero-topbar {
@@ -861,7 +861,6 @@ section {
   .about-container {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 0 16px;
   }
 
   .about-left {
@@ -909,10 +908,6 @@ section {
   .projects-btn.prev,
   .projects-btn.next {
     display: none;
-  }
-
-  .projects-carousel {
-    padding: 0 16px;
   }
 
   .projects-track {
