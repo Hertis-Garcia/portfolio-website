@@ -831,6 +831,15 @@ section {
     overflow-x: hidden;
   }
 
+  .hero-container,
+  .about-container,
+  .skills-grid,
+  .projects-carousel {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: auto;
+  }
+
   .section-title {
     font-size: 1.9rem;
   }
