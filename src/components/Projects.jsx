@@ -104,23 +104,70 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   const ref = useReveal();
+  const [activeCategory, setActiveCategory] = useState("cloud");
+  const filteredProjects = projects.filter(
+    (project) => project.category === activeCategory
+  );
+  const categories = [
+    { id: "cloud", label: "Cloud" },
+    { id: "qa", label: "QA" },
+  ];
 
   return (
     <section id="projects" style={{ padding: "80px 24px" }}>
       <SectionLabel>Projects</SectionLabel>
 
       <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 0,
+          marginBottom: 24,
+        }}
+      >
+        {categories.map((category) => {
+          const isActive = activeCategory === category.id;
+
+          return (
+            <button
+              key={category.id}
+              type="button"
+              onClick={() => setActiveCategory(category.id)}
+              aria-pressed={isActive}
+              style={{
+                minWidth: 118,
+                padding: "10px 20px",
+                border: `1px solid ${
+                  isActive ? colors.primary : colors.border
+                }`,
+                background: isActive ? colors.primary : colors.black,
+                color: isActive ? colors.black : colors.secondary,
+                fontFamily: "'Space Mono', monospace",
+                fontSize: 10,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                transition: "all 0.15s",
+              }}
+            >
+              {category.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div
         ref={ref}
         className="reveal"
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
           gap: 1,
           background: "#111",
           border: "1px solid #111",
         }}
       >
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <ProjectCard key={project.num} project={project} />
         ))}
       </div>

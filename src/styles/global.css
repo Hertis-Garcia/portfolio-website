@@ -21,6 +21,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body,
+a,
+button {
+  cursor: none;
+}
+
 /* ── Animations ────────────────────────────────── */
 @keyframes fadeUp {
   from {
@@ -30,6 +36,27 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes driftGrid {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-72px, -72px, 0);
+  }
+}
+
+@keyframes pulseSweep {
+  0%,
+  100% {
+    opacity: 0.32;
+    transform: translate3d(-12%, -8%, 0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.56;
+    transform: translate3d(8%, 10%, 0) rotate(180deg);
   }
 }
 
@@ -48,4 +75,112 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.site-shell::before,
+.site-shell::after {
+  content: "";
+  position: fixed;
+  inset: -120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-shell::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black, transparent 74%);
+  animation: driftGrid 18s linear infinite;
+}
+
+.site-shell::after {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.12), transparent 18%),
+    radial-gradient(circle at 78% 18%, rgba(160, 160, 160, 0.1), transparent 22%),
+    radial-gradient(circle at 52% 82%, rgba(255, 255, 255, 0.08), transparent 24%);
+  filter: blur(28px);
+  animation: pulseSweep 16s ease-in-out infinite;
+}
+
+.site-shell > :not(.cursor-dot):not(.cursor-orbit) {
+  position: relative;
+  z-index: 1;
+}
+
+.cursor-dot,
+.cursor-orbit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 20;
+  will-change: transform, opacity;
+}
+
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: opacity 0.14s ease;
+}
+
+.cursor-orbit {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 50%;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.16);
+  transition:
+    width 0.16s ease,
+    height 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease,
+    opacity 0.14s ease;
+}
+
+.cursor-dot.visible,
+.cursor-orbit.visible {
+  opacity: 1;
+}
+
+.cursor-orbit.active {
+  width: 46px;
+  height: 46px;
+  border-color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (pointer: coarse) {
+  body,
+  a,
+  button {
+    cursor: auto;
+  }
+
+  .cursor-dot,
+  .cursor-orbit {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell::before,
+  .site-shell::after {
+    animation: none;
+  }
+
+  .cursor-dot,
+  .cursor-orbit {
+    transition: none;
+  }
 }

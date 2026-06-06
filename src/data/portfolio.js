@@ -40,12 +40,17 @@ export const stack = [
   {
     label: 'DevOps & Cloud Technologies',
     pills: ['Docker', 'Kubernetes', 'AWS', 'Kubectl', 'Minikube', 'GitHub Actions', 'CI/CD Concepts', 'AWS Cloud Fundamentals', 'Jira'],
+  },
+  {
+    label: 'QA & Testing Tools',
+    pills: ['Playwright', 'Postman', 'Jira', 'Zephyr', 'Test Case Design', 'Defect Tracking', 'API Testing', 'Functional Testing', 'Regression Testing', 'Smoke Testing', 'User Acceptance Testing (UAT)'],
   }
 ]
 
 export const projects = [
   {
     num: '01',
+    category: 'cloud',
     name: 'Monetary Intelligence Ledger Organizer (MILO)',
     desc: 'A full-featured budgeting application with cloud-based backend integration.',
     tags:  ['Flutter', 'Dart', 'Firebase', 'OCR', 'AI', 'GitHub'],
@@ -53,6 +58,7 @@ export const projects = [
   },
   {
     num: '02',
+    category: 'cloud',
     name: 'DataFlow CLI',
     desc: 'Pipeline tool for transforming and routing structured data streams between heterogeneous services.',
     tags: ['Python', 'Click', 'Kafka'],
@@ -60,6 +66,7 @@ export const projects = [
   },
   {
     num: '03',
+    category: 'cloud',
     name: 'Minimal CMS',
     desc: 'Headless content management system built for developer experience with zero-config deployments.',
     tags: ['Next.js', 'Postgres', 'S3'],
@@ -67,23 +74,26 @@ export const projects = [
   },
   {
     num: '04',
+    category: 'qa',
     name: 'Auth Kit',
-    desc: 'Drop-in authentication library supporting OAuth2, passkeys, and TOTP through a single unified API.',
-    tags: ['TypeScript', 'JWT'],
+    desc: 'QA validation project covering authentication flows, API requests, defects, and regression scenarios.',
+    tags: ['Playwright', 'Postman', 'Jira', 'Zephyr'],
     link: '#',
   },
   {
     num: '05',
+    category: 'qa',
     name: 'Budget Tracker',
-    desc: 'Personal finance app with automatic transaction categorization via a locally-running ML classifier.',
-    tags: ['React Native', 'FastAPI'],
+    desc: 'Test case design and functional testing coverage for transaction entry, categorization, and reporting workflows.',
+    tags: ['Test Cases', 'Functional Testing', 'Regression'],
     link: '#',
   },
   {
     num: '06',
+    category: 'qa',
     name: 'OSS Contribution',
-    desc: 'Core contributor to an open-source observability platform — added distributed tracing & alert routing.',
-    tags: ['Go', 'Prometheus'],
+    desc: 'Defect tracking and smoke testing practice for release readiness across observability workflows.',
+    tags: ['Defect Tracking', 'Smoke Testing', 'UAT'],
     link: '#',
   },
 ]
