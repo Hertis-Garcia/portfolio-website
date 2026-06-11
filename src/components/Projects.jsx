@@ -106,7 +106,7 @@ export default function Projects() {
   const ref = useReveal();
   const [activeCategory, setActiveCategory] = useState("cloud");
   const filteredProjects = projects.filter(
-    (project) => project.category === activeCategory
+    (project) => project.category === activeCategory,
   );
   const categories = [
     { id: "cloud", label: "Cloud" },
@@ -161,7 +161,11 @@ export default function Projects() {
         className="reveal"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gridTemplateColumns:
+            filteredProjects.length <= 3
+              ? "repeat(3, minmax(240px, 350px))"
+              : "repeat(auto-fit, minmax(240px, 1fr))",
+          justifyContent: "center",
           gap: 1,
           background: "#111",
           border: "1px solid #111",
