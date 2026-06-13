@@ -99,9 +99,29 @@ export const projects = [
 ]
 
 export const socials = [
-  { label: 'GitHub', href: 'https://github.com/Hertis-Garcia' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/darius-john-garcia' },
-  { label: 'Email', href: 'mailto:darius.forworkgarcia@gmail.com' },
-  { label: 'QA Resume', href: '/Qa_Resume.pdf' },
-  { label: 'Cloud Resume', href: '/Cloud_Resume.pdf' },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/Hertis-Garcia',
+    newTab: true,
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/darius-john-garcia',
+    newTab: true,
+  },
+  {
+    label: 'Email',
+    href: 'mailto:darius.forworkgarcia@gmail.com',
+    newTab: false,
+  },
+  {
+    label: 'QA Resume',
+    href: '/Qa_Resume.pdf',
+    newTab: true,
+  },
+  {
+    label: 'Cloud Resume',
+    href: '/Cloud_Resume.pdf',
+    newTab: true,
+  },
 ];
