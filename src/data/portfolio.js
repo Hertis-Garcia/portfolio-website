@@ -115,13 +115,8 @@ export const socials = [
     newTab: false,
   },
   {
-    label: 'QA Resume',
-    href: '/Qa_Resume.pdf',
-    newTab: true,
-  },
-  {
-    label: 'Cloud Resume',
-    href: '/Cloud_Resume.pdf',
+    label: 'Resume',
+    href: 'https://canva.link/fwz4sjg94q4x7ns',
     newTab: true,
   },
 ];
