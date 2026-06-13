@@ -1,6 +1,6 @@
 export const education = [
   {
-    year: '2020 – 2024',
+    year: '2022 – Aug 2026',
     title: 'B.S. Information Technology',
     sub: 'De La Salle University – Dasmariñas',
     details: [
@@ -14,12 +14,12 @@ export const education = [
 
 export const experience = [
   {
-    year: '2024',
+    year: '2026',
     title: 'Business Solutions and Production Support Intern',
     sub: 'Global Dominion Financing Inc. (GDFI)',
     details: [
       'Supported and monitored Loan Origination and Management Systems (LOS/LMS) used in daily operations.',
-      'Reviewed Business Requirement Documents (BRD) and participated in User Acceptance Testing (UAT).',
+      'Reviewed Business Requirement Documents (BRD) and participated in User Acceptance Testing (UAT) for system vendors in Telephony and Agentic Solution Systems.',
       'Researched emerging technologies to support optimization of end-to-end business workflows.',
       'Developed and deployed an internal ticketing system using MS PowerApps for issue tracking.',
       'Gained exposure to software deployment workflows and IT infrastructure support operations.',
@@ -99,8 +99,9 @@ export const projects = [
 ]
 
 export const socials = [
-  { label: 'GitHub',   href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Email',    href: 'mailto:you@email.com' },
-  { label: 'Resume',   href: '#' },
-]
+  { label: 'GitHub', href: 'https://github.com/Hertis-Garcia' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/darius-john-garcia' },
+  { label: 'Email', href: 'mailto:darius.forworkgarcia@gmail.com' },
+  { label: 'QA Resume', href: '/Qa_Resume.pdf' },
+  { label: 'Cloud Resume', href: '/Cloud_Resume.pdf' },
+];
