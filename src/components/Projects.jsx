@@ -156,21 +156,16 @@ export default function Projects() {
         })}
       </div>
 
-      <div
-        ref={ref}
-        className="reveal"
-        style={{
-          display: "grid",
-          gridTemplateColumns:
-            filteredProjects.length <= 3
-              ? "repeat(3, minmax(240px, 350px))"
-              : "repeat(auto-fit, minmax(240px, 1fr))",
-          justifyContent: "center",
-          gap: 1,
-          background: "#111",
-          border: "1px solid #111",
-        }}
-      >
+  <div
+  ref={ref}
+  className="reveal projects-grid"
+  style={{
+    display: "grid",
+    gap: 1,
+    background: "#111",
+    border: "1px solid #111",
+  }}
+>
         {filteredProjects.map((project) => (
           <ProjectCard key={project.num} project={project} />
         ))}

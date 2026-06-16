@@ -184,3 +184,13 @@ button {
     transition: none;
   }
 }
+.projects-grid {
+  grid-template-columns: repeat(3, minmax(240px, 350px));
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
