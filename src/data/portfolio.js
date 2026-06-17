@@ -91,10 +91,10 @@ export const projects = [
 {
   num: '06',
   category: 'qa',
-  name: 'M.I.L.O. Financial Management Application',
+  name: 'M.I.L.O. Financial Management Application System Testing Documentation',
   desc: `Developed and tested a Flutter-based budgeting application with Firebase, OCR receipt scanning, AI chatbot integration, and cloud-based data management.`,
   tags: ['Flutter', 'Dart', 'Firebase', 'OCR', 'AI Chatbot', 'GitHub'],
-  link: '#',
+  link: 'https://docs.google.com/document/d/1m9JxIMF4TNOavrIrRmE34pQLsLVMPBDYyQs8z9eASmc/edit?usp=sharing',
 },
 ]
 
