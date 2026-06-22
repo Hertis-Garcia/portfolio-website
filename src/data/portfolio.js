@@ -78,7 +78,7 @@ export const projects = [
   name: 'OpsTicket Test Automation Framework',
   desc: `Developed an end-to-end test automation framework using Playwright and TypeScript. Automated ticketing workflows, implemented Page Object Model components, and executed regression testing.`,
   tags: ['Playwright', 'TypeScript', 'JavaScript', 'Node.js', 'Git', 'Jira'],
-  link: '#',
+  link: 'https://github.com/Hertis-Garcia/OpsTicket',
 },
 {
   num: '05',
