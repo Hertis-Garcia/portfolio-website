@@ -62,7 +62,7 @@ export const projects = [
   name: 'OpsTicket DevOps Deployment',
   desc: `Containerized and deployed a full-stack ticketing application using Docker, Kubernetes, and Minikube. Managed frontend/backend services, configured networking, and resolved deployment and connectivity issues through troubleshooting and log analysis.`,
   tags: ['Docker', 'Kubernetes', 'Minikube', 'React', 'Node.js', 'Linux'],
-  link: '#',
+  link: 'https://github.com/Hertis-Garcia/OpsTicket',
 },
 {
   num: '03',
@@ -86,7 +86,7 @@ export const projects = [
   name: 'Software Testing Documentation & Workflow Management',
   desc: `Created and maintained test plans, test cases, defect reports, and test data while managing testing workflows and defect tracking through Jira and Trello.`,
   tags: ['Jira', 'Trello', 'Excel', 'Google Sheets', 'UAT', 'QA Testing'],
-  link: '#',
+  link: 'https://dariusforworkgarcia.atlassian.net/jira/software/projects/KAN/list?jql=project+%3D+KAN+ORDER+BY+cf%5B10019%5D+ASC&atlOrigin=eyJpIjoiZjYyZjE1NzNkNjAyNDUwZWFmMmRjNDAyY2Q2N2I1ZWMiLCJwIjoiaiJ9',
 },
 {
   num: '06',
