@@ -77,7 +77,7 @@ export const projects = [
   category: 'qa',
   name: 'OpsTicket Test Automation Framework',
   desc: `Developed an end-to-end test automation framework using Playwright and TypeScript. Automated ticketing workflows, implemented Page Object Model components, and executed regression testing.`,
-  tags: ['Playwright', 'TypeScript', 'JavaScript', 'Node.js', 'Git', 'Jira'],
+  tags: ['Playwright', 'TypeScript', 'JavaScript', 'Node.js', 'Git'],
   link: 'https://github.com/Hertis-Garcia/OpsTicket',
 },
 {
@@ -85,7 +85,7 @@ export const projects = [
   category: 'qa',
   name: 'Software Testing Documentation & Workflow Management',
   desc: `Created and maintained test plans, test cases, defect reports, and test data while managing testing workflows and defect tracking through Jira and Trello.`,
-  tags: ['Jira', 'Trello', 'Excel', 'Google Sheets', 'UAT', 'QA Testing'],
+  tags: ['Jira', 'QA Testing'],
   link: 'https://dariusforworkgarcia.atlassian.net/jira/software/projects/KAN/list?jql=project+%3D+KAN+ORDER+BY+cf%5B10019%5D+ASC&atlOrigin=eyJpIjoiZjYyZjE1NzNkNjAyNDUwZWFmMmRjNDAyY2Q2N2I1ZWMiLCJwIjoiaiJ9',
 },
 {
