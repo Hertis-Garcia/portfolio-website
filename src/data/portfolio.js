@@ -15,14 +15,16 @@ export const education = [
 export const experience = [
   {
     year: '2026',
-    title: 'Business Solutions and Production Support Intern',
+    title: 'Software Quality Assurance Analyst Intern',
     sub: 'Global Dominion Financing Inc. (GDFI)',
     details: [
-      'Supported and monitored Loan Origination and Management Systems (LOS/LMS) used in daily operations.',
-      'Reviewed Business Requirement Documents (BRD) and participated in User Acceptance Testing (UAT) for system vendors in Telephony and Agentic Solution Systems.',
-      'Researched emerging technologies to support optimization of end-to-end business workflows.',
-      'Developed and deployed an internal ticketing system using MS PowerApps for issue tracking.',
-      'Gained exposure to software deployment workflows and IT infrastructure support operations.',
+      'Quality Assurance & Requirements Validation: Reviewed Business Requirement Documents (BRDs) and participated in User Acceptance Testing (UAT) to validate system enhancements, vendor deliverables, and business requirements before production deployment.',
+      'System Testing & Defect Identification: Executed system validation activities for Loan Origination Systems (LOS) and Loan Management Systems (LMS), identified defects, documented reproduction steps, and assisted in verifying fixes.',
+      'Defect Reporting & Retesting: Reported defects discovered during UAT and system validation, coordinated with relevant teams on issue resolution, and verified fixes before production deployment.',
+      'Test Validation & Release Readiness: Assisted in validating system enhancements and vendor deliverables to ensure compliance with business requirements before release.',
+      'Process Improvement & Technical Analysis: Researched technology solutions and process optimization strategies to improve business workflows and support continuous system enhancements.',
+      'Application Development & Automation: Developed and deployed an internal ticketing system using Microsoft Power Apps to streamline issue tracking, support requests, and operational workflows.',
+      'System Monitoring & IT Operations: Supported and monitored Loan Origination Systems (LOS) and Loan Management Systems (LMS), assisting in maintaining system availability and resolving production-related issues.',
     ],
   },
 ]
@@ -116,7 +118,7 @@ export const socials = [
   },
   {
     label: 'Resume',
-    href: 'https://canva.link/fwz4sjg94q4x7ns',
+    href: 'https://canva.link/a2kmw1wm2mswxbb',
     newTab: true,
   },
 ];
